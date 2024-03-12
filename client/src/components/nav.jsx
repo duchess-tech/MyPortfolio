@@ -7,7 +7,7 @@ import { forwardRef, useRef } from 'react';
 const Nav = forwardRef((props, ref) => {
 
     const handleTocontact = () => {
-        ref.contactRef.current.scrollIntoView({ behavior: 'smooth' });
+        ref.contactRef.current.scrollIntoView({ behavior:"smooth"});
     };
   
     const handleToaboutme = () => {
