@@ -17,9 +17,10 @@ body {
 }
 
 .aboutme-bg {
-  background-image: url("Heroo.png");
+  /* background-image: url("Heroo.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: black;
 }
 
 .nav-bg {
