@@ -59,7 +59,7 @@ const Myproject = forwardRef((props, ref) => {
 
                     <ProjectHover 
                     link="http://heycommerce.vercel.app"
-                    title="Ecommerce" about="it's a user-friendly e-commerce platform with easy product browsing,quick cart addition, efficient filtering, and detailed desriptions for informed purchases, all wrapped in a secure checkout experience."  />
+                    title="Ecommerce" about="It's a user-friendly e-commerce platform with easy product browsing,quick cart addition, efficient filtering, and detailed desriptions for informed purchases, all wrapped in a secure checkout experience."  />
 
                 </div>
                 <div className="relative group">
@@ -67,9 +67,8 @@ const Myproject = forwardRef((props, ref) => {
                         <img src="tasktraker.jpg" alt="Tasktraker-img" />
                     </div>
                     <ProjectHover 
-                    color="#ffffff" 
                     title="Tasktracker"
-                     about="it's a task tracker application designed to streamline your workflow. Users can easily add, start, suspend,or delete tasks as needed,providing flexiblity and organization in managing their projects and responsility." />
+                     about="Task tracker web application designed to streamline your workflow. Users can easily add,start,suspend,or delete tasks as needed,providing flexiblity and organization in managing their projects and responsility." />
 
                 </div>
                 <div className="relative group">
@@ -77,7 +76,8 @@ const Myproject = forwardRef((props, ref) => {
                         <img src="blog.jpg" className="h-full w-full" alt="blog-img" />
                     </div>
                     <ProjectHover
-                    
+                    about=
+                    "Blog project where you can explore a wide range of engaging articles. Sign up to personalize your experience, learn more about the blog's background, and easily filter through topics to find content that interests you."
                     title="Blog" />
                 </div>
 
@@ -85,7 +85,7 @@ const Myproject = forwardRef((props, ref) => {
                     <div onClick={OpenAirbnb} className=" border 2xl:w-96 2xl:h-56 w-56 h-72  overflow-hidden  rounded-xl ">
                         <img src="airbnb.png" alt="airbnb-img" />
                     </div>
-                    <ProjectHover title="Airbnb" about=" Introducing our Airbnb clone project – your virtual portal to explore the world of travel. Discover properties, filter by location and room count, and experience the joy of building your dream vacation. This project is a labor of love, crafted for learning and exploration. Happy travels!" />
+                    <ProjectHover title="Airbnb Clone" about=" Introducing our Airbnb clone project – your virtual portal to explore the world of travel. Discover properties, filter by location and room count, and experience the joy of building your dream vacation. This project is a labor of love, crafted for learning and exploration. Happy travels!" />
                 </div>
                 <div className="relative group" >
                     <div onClick={OpenPortfolio} className=" border border-white 2xl:w-96 2xl:h-96 w-56 h-72  overflow-hidden  rounded-xl ">
@@ -93,7 +93,7 @@ const Myproject = forwardRef((props, ref) => {
                     </div>
                     <ProjectHover
                     link="http://my-portfolio-sjvo.vercel.app"
-                    about="its a portfolio app, showcasing my skills and projects. Discover an About Me section, browse through my tech stack, view showcased projects, and connect via the contact page."
+                    about="Portfolio app showcasing my skills and projects. Discover an About Me section, browse through my tech stack, view showcased projects, and connect via the contact page."
                      title="Portfolio" />
 
                 </div>
@@ -102,7 +102,8 @@ const Myproject = forwardRef((props, ref) => {
                     <div onClick={OpenCryptoCracker} className="  2xl:w-96 2xl:h-96 w-56 h-72  overflow-hidden  rounded-xl ">
                         <img src="cryptoTracker.png" alt="cryptotracker-img" />
                     </div>
-                    <ProjectHover title="cryptoTracker" />
+                    <ProjectHover title="CryptoTracker" 
+                    about="Crypto tracker app with real-time cryptocurrency values, informative crypto blogs,  with integrated chat features"/>
 
                 </div>
 

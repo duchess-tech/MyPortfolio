@@ -6,6 +6,9 @@ body {
   --tw-bg-opacity: 1;
   background-color: white;
 }
+.word-spacing {
+   word-spacing: 0.02rem; 
+}
 
 .projectHover {
   background: rgba(255, 255, 255, 0.2);
@@ -17,14 +20,13 @@ body {
 }
 
 .aboutme-bg {
-  /* background-image: url("Heroo.png");
+   background-image: url("Heroo.PNG");
   background-repeat: no-repeat;
-  background-size: cover; */
-  background-color: black;
+  background-size: cover;
 }
 
 .nav-bg {
-  background-image: url("Heroo.png");
+  background-image: url("Heroo.PNG");
   background-repeat: no-repeat;
   background-size: cover;
 }
