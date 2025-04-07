@@ -14,11 +14,11 @@ const Aboutme = forwardRef((props, ref) => {
     <div className="sm:m-0 aboutme-bg  tilt-in-tr   " ref={ref.aboutmeRef}>
       <div className="flex pt-40 xl:pt-34 items-center   flex-wrap  overflow-hidden justify-center gap-12">
         <div className="xl:w-6/12 w-full 2xl:w-6/12 ">
-          <h1 className="xl:text-5xl text-3xl text-center tracking-in-expand text-[#d8b9b9] mb-2 xl:mt-12">
+          <h1 className="xl:text-5xl text-3xl text-center tracking-in-expand text-[#a3a1a1] mb-2 xl:mt-12">
             ABOUT ME
           </h1>
           <div className="xl:p-3 p-4">
-            <p className="2xl:text-md text-sm xl:text-sm text-justify text-[#d8b9b9]">
+            <p className="2xl:text-md text-sm xl:text-sm text-justify text-[#b3b2b2]">
               I am a Software developer, passionate about consistently advancing
               my knowledge and skills to craft intuitive and dynamic user
               interfaces.I belong to Ibadan Techies club,i have also attended

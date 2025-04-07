@@ -20,13 +20,13 @@ body {
 }
 
 .aboutme-bg {
-   background-image: url("../../public/Heroo.png");
+   background-image: url("/Heroo.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .nav-bg {
-  background-image: url("../../public/Heroo.png");
+  background-image: url("/Heroo.png");
   background-repeat: no-repeat;
   background-size: cover;
  }
