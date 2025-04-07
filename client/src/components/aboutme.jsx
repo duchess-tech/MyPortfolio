@@ -13,7 +13,7 @@ const Aboutme = forwardRef((props, ref) => {
   return (
     <div className="sm:m-0 aboutme-bg  tilt-in-tr   " ref={ref.aboutmeRef}>
       <div className="flex pt-40 xl:pt-34 items-center   flex-wrap  overflow-hidden justify-center gap-12">
-        <div className="xl:w-6/12 w-full  ">
+        <div className="xl:w-6/12 w-full 2xl:w-6/12 ">
           <h1 className="xl:text-5xl text-3xl text-center tracking-in-expand text-[#d8b9b9] mb-2 xl:mt-12">
             ABOUT ME
           </h1>
@@ -25,8 +25,8 @@ const Aboutme = forwardRef((props, ref) => {
               multiple seminars on coding. My journey into tech world isn't only
               about writing lines of code, it's about creating meaningful
               solutions that have real impact. If you are curious about the
-              projects i've worked on or looking for a collaborate on a new
-              venture please fell free to explore my portfolio or reachout,i'm
+              projects i've worked on or looking for a collaboration on a new
+              venture please feel free to explore my portfolio or reachout,i'm
               always eager to connect and discuss the limitless possibilities
               the tech world offers.
             </p>

@@ -50,7 +50,7 @@ const Myproject = forwardRef((props, ref) => {
     return (
         <div className={`project 2xl:w-full sm:w-full pb-2  bg-[#e5eaf3]  mt-0  sm:p-6 animate-on-scroll ${isVisible ? 'animate' : ''}`} ref={ref.myprojectRef}  >
             <h1 className='2xl:text-5xl xl:text-4xl text-3xl tracking-in-expand text-center  pt-4  mb-8 font-bold text-navyblue'>PROJECTS</h1>
-            <div className="  flex flex-wrap sm:flex-wrap sm:gap-8 gap-8  justify-around w-4/5 mx-auto">
+            <div className="  flex flex-wrap sm:flex-wrap sm:gap-8 gap-8 xl:gap-10 justify-around w-4/5 mx-auto">
 
                 <div className="relative group">
                     <div onClick={OpenEcommerce} className={` 2xl:w-56 2xl:h-56 w-56 h-72 border overflow-hidden  rounded-xl  hover:${hoverProject ? "" : ""}`}>

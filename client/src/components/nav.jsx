@@ -22,9 +22,10 @@ const Nav = forwardRef((props, ref) => {
 
 
     return (
-        <nav ref={ref.NavRef} className="nav-bg w-full xl:flex xl:gap-32 xl:justify-center xl:p-6 p-2 sm:px-5 sm:py-4 fixed   top-0 z-50 xl:flex-nowrap  flex flex-wrap  2xl:p-8 2xl:justify-between justify-center 2xl:flex  lg:justify-around   
+        <nav ref={ref.NavRef} className="nav-bg w-full items-center lg:gap-52  xl:justify-center xl:p-6 p-2 sm:px-5 sm:py-4 fixed   top-0 z-50   flex flex-wrap lg:flex-nowrap md:flex-nowrap 2xl:flex-nowrap  xl:flex-nowrap    2xl:p-8 2xl:justify-between justify-center  lg:justify-evenly  
          ">
-            <div className='w-full xl:w-[100px] flex justify-center'>
+          
+            <div className='w-full xl:w-[100px] lg:w-[100px]  md:w-[100px]  2xl:w-[100px]  flex justify-center'>
                 <h1 className='mt-4 xl:mt-1 text-center lg:text-4xl md:text-4xl xl:text-4xl text-white text-3xl skew-x-3  mb-4'>E.O</h1>
             </div>
             <div className=' lg:space-x-2 sm:hidden hidden md:hidden lg:block w-full xl:w-[665px] '  >
