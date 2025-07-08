@@ -11,7 +11,7 @@ function Footer() {
 
     return (
 
-        <div className='lg:flex sm:p-2 pb-32 xl:pb-0 bg-[#f6efef] lg:items-center p-4 justify-around sm:text-center sm:column-reverse'>
+        <div className='sm:flex sm:p-12    bg-[#f6efef] sm:items-center p-4 justify-around sm:text-center sm:column-reverse'>
             <div className="lg:w-72 sm:w-full 2xl:my-9 my-2  w-full  text-sm">
                 <h1><FontAwesomeIcon icon={faLocationDot} color="rgb(31,41,55)" size="2x"></FontAwesomeIcon></h1>
                 <p>Address</p>

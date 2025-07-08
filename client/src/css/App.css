@@ -27,24 +27,8 @@ body {
 
 .aboutme-bg {
    background-image: url("/Heroo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.aboutme-bg::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: 1;
-}
-@media (max-width: 768px) {
-  .aboutme-bg {
-    background-image: url("/myimage.png");
-  }
-}
+
 
 .nav-bg {
   background-image: url("/Heroo.png");
@@ -288,15 +272,7 @@ body {
   animation: slideIn 0.7s ease-in-out backwards;
 }
 
-/* @keyframes slideIn {
 
-    0% {
-te      }
-      to {
-        right: 100%;
-      }
-  } 
-  */
 .swing-in {
   animation: swing-in 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
@@ -312,4 +288,73 @@ te      }
     transform-origin: top;
     opacity: 1;
   }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-once {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(1.09)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes text-rise {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-rotate-once {
+  animation: rotate-once 2.5s ease-in-out;
+}
+.animate-fade-slide-in {
+  animation: fade-slide-in 1.2s ease forwards;
+}
+.scale-in-center {
+  animation: scale-in-center 1s ease forwards;
+}
+.animate-text-rise {
+  animation: text-rise 1.5s ease forwards;
 }
