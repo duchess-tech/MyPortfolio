@@ -6,14 +6,13 @@ const SendEmail = async (req, res) => {
     const message = req.body.message
 
     try {
-        console.log("here")
+        console.log(req.body)
         ev.emit("sendmail", email, name, message)
         res.status(200).json({ message: "successfull" })
     }
     catch (err) {
         console.log(err)
-        res.status(500).json({ message: "Not successfuly" })
-        
+        res.status(500).json({ message: "Failed to send message" })
     }
 
 

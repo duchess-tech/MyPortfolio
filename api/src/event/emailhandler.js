@@ -6,7 +6,7 @@ const { gmail_user } = require("../config/env")
 
 ev.on("sendmail", (email, name, message) => {
     mailer.sendMail({
-        subject: "From portfolio",
+        subject: "From your portfolio",
         from: gmail_user,
         to: "estherodedoyin1@gmail.com",
         template: "portfolio",

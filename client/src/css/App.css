@@ -9,7 +9,13 @@ body {
 .word-spacing {
    word-spacing: 0.02rem; 
 }
-
+/* .Toastify__toast-container {
+  position: absolute !important;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+} */
 .projectHover {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -24,6 +30,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.aboutme-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .aboutme-bg {
+    background-image: url("/myimage.png");
+  }
+}
 
 .nav-bg {
   background-image: url("/Heroo.png");
@@ -31,9 +52,6 @@ body {
   background-size: cover;
  }
 
-.project {
-  margin-top: 10px;
-}
 
 .animate {
   opacity: 1;

@@ -12,7 +12,7 @@ const Aboutme = forwardRef((props, ref) => {
   //bg-[#f6efef]
   return (
     <div className="sm:m-0 aboutme-bg  tilt-in-tr   " ref={ref.aboutmeRef}>
-      <div className="flex pt-40 xl:pt-34 items-center   flex-wrap  overflow-hidden justify-center gap-12">
+      <div className="flex pt-40 xl:pt-34 items-center   flex-wrap  overflow-hidden justify-center gap-24">
         <div className="xl:w-6/12 w-full 2xl:w-6/12 ">
           <h1 className="xl:text-5xl text-3xl text-center tracking-in-expand text-[#a3a1a1] mb-2 xl:mt-12">
             ABOUT ME
@@ -44,11 +44,11 @@ const Aboutme = forwardRef((props, ref) => {
           </div>
           {/* <span className='cursor'>|</span> */}
         </div>
-        <div className="xl:w-96 xl:h-96  w-56 h-56  rounded-full bg-[#042a2d] relative">
-          <div className="absolute xl:left-9 xl:w-[300px] w-[200px]  left-5">
+        <div className="xl:w-72 xl:h-72   w-56 h-56 mb-12 rounded-full bg-[#042a2d] relative ">
+        <div className="absolute xl:right-[450px]   xl:top-6 border xl:w-[400px] w-[200px] top-6 -left-14">
             <img
               src="myimage.png"
-              className="xl:w-[300px] mt-2 w-[200px] "
+              className="xl:w-full mt-2 w-full  "
               alt="my-picture"
             ></img>
           </div>
@@ -56,13 +56,13 @@ const Aboutme = forwardRef((props, ref) => {
           <div className="cursor-pointer flex text-[#042a2d] bounce-in-top hover:text-[#ffffff]  justify-center items-center xl:w-[50px] xl:h-[50px] w-[30px] h-[30px]  hover:bg-[#3c344b] rounded-full bg-[#f6efef] absolute xl:top-12 xl:left-2 left-2 top-8">
             <IoCall />
           </div>
-          <div className="cursor-pointer text-[#042a2d]  hover:text-white bounce-in-top  flex justify-center items-center xl:w-[50px] xl:h-[50px]  w-[30px] h-[30px] rounded-full bg-[#f6efef] hover:bg-[#3c344b] absolute  xl:-top-5 xl:left-28 left-14 -top-2">
+          <div className="cursor-pointer text-[#042a2d]  hover:text-white bounce-in-top  flex justify-center items-center xl:w-[50px] xl:h-[50px]  w-[30px] h-[30px] rounded-full bg-[#f6efef] hover:bg-[#3c344b] absolute  xl:-top-3 xl:left-20 left-14 top-1">
             <BsFillBriefcaseFill />
           </div>
-          <div className="cursor-pointer text-[#042a2d] hover:text-white bounce-in-top   flex justify-center items-center xl:w-[50px] xl:h-[50px] rounded-full w-[30px] h-[30px] bg-[#f6efef] hover:bg-[#3c344b] absolute xl:-top-6 xl:left-56 left-32 -top-2 ">
+          <div className="cursor-pointer text-[#042a2d] hover:text-white bounce-in-top   flex justify-center items-center xl:w-[50px] xl:h-[50px] rounded-full w-[30px] h-[30px] bg-[#f6efef] hover:bg-[#3c344b] absolute xl:-top-3 xl:left-44 left-24 -top-2 ">
             <MdDownloadForOffline size={20} />
           </div>
-          <div className="cursor-pointer text-[#042a2d] hover:text-white bounce-in-top  flex justify-center items-center xl:w-[50px] xl:h-[50px] w-[30px] h-[30px] rounded-full bg-[#f6efef] hover:bg-[#3c344b] absolute right-2 xl:top-14 top-7">
+          <div className="cursor-pointer text-[#042a2d] hover:text-white bounce-in-top  flex justify-center items-center xl:w-[50px] xl:h-[50px] w-[30px] h-[30px] rounded-full bg-[#f6efef] hover:bg-[#3c344b] absolute -right-1 xl:top-14 top-7">
             <RxGithubLogo size={20} />
           </div>
         </div>
