@@ -8,7 +8,7 @@ function HamburgerMenu(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex items-center w-full justify-center  sm:px-4 sm:py-3 md:px-10 lg:hidden ">
+        <div className={`flex items-center w-full justify-center  sm:px-4 sm:py-3 md:px-10 lg:hidden  ${ props.isScrolled ? "bg-[#00222b]" : "bg-transparent"}`}>
             <button
                 type="button"
                 className="block text-white  md:hidden transition transform delay-100  "

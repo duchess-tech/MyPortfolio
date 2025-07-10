@@ -28,6 +28,7 @@ const Nav =({ refs, handleToaboutme, handleToskills, handletomyproject, handleTo
                 handleTocontact={handleTocontact}
                 handleToskills={handleToskills}
                 handletomyproject={handletomyproject}
+                isScrolled ={isScrolled}
              />
 
 
