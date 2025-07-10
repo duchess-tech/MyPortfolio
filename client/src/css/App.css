@@ -5,6 +5,7 @@
 body {
   --tw-bg-opacity: 1;
   background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 .word-spacing {
    word-spacing: 0.02rem; 
@@ -25,9 +26,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.aboutme-bg {
-   background-image: url("/Heroo.png");
-}
 
 
 .nav-bg {

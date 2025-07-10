@@ -8,7 +8,7 @@ import { FaNodeJs } from "react-icons/fa"
 
 const Skills = forwardRef((props, ref) => {
     return (
-        <section className="2xl:flex bg-[#042a2d] 2xl:justify-center  pb-9 pt-3  xl:pt-0  lg-pt-2" ref={ref.skillsRef}>
+        <section ref={ref.skillsRef} className="2xl:flex bg-[#042a2d] 2xl:justify-center  pb-9 pt-3  xl:pt-0  lg-pt-2" >
             <div className='2xl:w-1/2  xl:p-2  xl:w-full w-full sm:w-full sm:mt-24 sm:p-2 text-navyblue  xl:mt-0   text-center ' >
                 <h1 className='2xl:text-5xl xl:text-4xl text-3xl text-center font-bold pt-12  xl:pt-4 xl:mt-0 tracking-in-expand text-white'>STACK</h1>
                 <div className='flex  sm:gap-6 2xl:p-9 p-3 gap-5 justify-center sm:flex-wrap sm:p-2 sm-full flex-wrap m-auto xl:w-[700px] xl:gap-9  lg:w-10/12 sm:justify-center '>

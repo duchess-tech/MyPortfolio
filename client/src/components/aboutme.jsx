@@ -1,24 +1,73 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdDownloadForOffline } from "react-icons/md";
 import { RxGithubLogo } from "react-icons/rx";
+import Nav from "./nav";
 
-const Aboutme = forwardRef((props, ref) => {
+const Aboutme = ({refs}) => {
   const icons = [
     { Icon: IoCall, label: "Call Me", angle: -150, delay: "", link: "tel:+123456789" },
     { Icon: BsFillBriefcaseFill, label: "My Work", angle: -110, delay: "delay-150", link: "#portfolio" },
     { Icon: MdDownloadForOffline, label: "Resume", angle: -30, delay: "delay-300", link: "#download" },
     { Icon: RxGithubLogo, label: "GitHub", angle: -70, delay: "delay-500", link: "https://github.com" },
   ];
+    const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+     const isMobile = window.innerWidth < 640;
+    const sectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(!entry.isIntersecting); // true when not in hero/aboutme
+      },
+      {
+      threshold: 0.1,
+      rootMargin: isMobile ? "-900px 0px 0px 0px" : "-500px 0px 0px 0px", 
+      }
+    );
+
+    if (refs.aboutmeRef.current) {
+      sectionObserver.observe(refs.aboutmeRef.current);
+    }
+
+    return () => {
+      sectionObserver.disconnect();
+    };
+  }, []);
+
+  const handleTocontact2 = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+};
+ const handleTocontact = () => {
+        refs.contactRef.current.scrollIntoView({ behavior:"smooth"});
+    };
+  
+    const handleToaboutme = () => {
+        refs.aboutmeRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const handleToskills = () => {
+        refs.skillsRef.current.scrollIntoView({ behavior: 'smooth',  block: "center", });
+    };
+    const handletomyproject = () => {
+        refs.myprojectRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
 
   return (
+    <div  className="min-h-scren bg-cover bg-center" style={{ backgroundImage: 'url("/Heroo.png")' }}>
+       <Nav  
+         refs={refs}
+        handleTocontact={handleTocontact}
+        handleToaboutme={handleToaboutme}
+        handleToskills={handleToskills}
+        handletomyproject={handletomyproject}
+        isScrolled={isScrolled}
+        />
     <section
-      ref={ref.aboutmeRef}
-      className="w-full mt-24 py-20 px-6 sm:px-10 bg-[#1e1e2f] animate-fade-slide-in aboutme-bg"
+      ref={refs.aboutmeRef}
+      className="w-full  md:pt-44 pt-60  py-20 px-6    sm:px-10  animate-fade-slide-in "
     >
+
+       
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 text-center lg:text-left">
-        {/* Animated Image + Icons */}
         <div className="relative w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] pointer-events-none">
           <div className="absolute inset-0 rounded-full border-4 border-[#387d82] shadow-2xl scale-in-center"></div>
 
@@ -66,10 +115,10 @@ const Aboutme = forwardRef((props, ref) => {
             👋 Hello, I'm Esther
           </h2>
           <p className="text-base sm:text-lg leading-relaxed mb-6 text-justify opacity-90">
-            I’m a creative and results-driven <span className="text-[#66c8cf] font-semibold">Software Developer</span> with a strong foundation in building fast, accessible, and elegant digital experiences. From being an active member of the <span className="text-[#66c8cf] font-medium">Ibadan Techies Club</span> to contributing to real-world solutions, my journey is guided by a passion for coding and collaboration.
+            I'm a creative and results-driven <span className="text-[#66c8cf] font-semibold">Software Developer</span> with a strong foundation in building fast, accessible, and elegant digital experiences. From contributing to real-world solutions,to continuously learning and collaborating, my journey is guided by a passion for coding and teamwork.
           </p>
           <p className="text-base sm:text-lg leading-relaxed mb-8 text-justify opacity-90">
-            Let’s connect and build something amazing. Whether it's a portfolio review or a startup collaboration, I’m just one click away.
+            Let's connect and build something amazing. Whether it's a portfolio review or a startup collaboration, I'm just one click away.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
@@ -77,7 +126,7 @@ const Aboutme = forwardRef((props, ref) => {
               Explore My Projects
             </button>
             <button
-              onClick={props.handleTocontact2}
+              onClick={handleTocontact2}
               className="border border-[#387d82] text-[#66c8cf] px-6 py-2 rounded-lg hover:bg-[#f0fafa] transition transform hover:scale-105"
             >
               Let's Talk
@@ -87,94 +136,9 @@ const Aboutme = forwardRef((props, ref) => {
       </div>
 
      
-    </section>
+    </section></div>
   );
-});
+};
 
 export default Aboutme;
 
-
-
-// import { forwardRef, useState } from "react";
-// import { IoCall } from "react-icons/io5";
-// import { BsFillBriefcaseFill } from "react-icons/bs";
-// import { MdDownloadForOffline } from "react-icons/md";
-// import { RxGithubLogo } from "react-icons/rx";
-
-// const Aboutme = forwardRef((props, ref) => {
-//   const [displayedText, setDisplayedText] = useState("");
-//   const [hideImage, setHideImage] = useState(false);
-
-//   return (
-//     <div className="aboutme-bg tilt-in-tr relative w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-20" ref={ref.aboutmeRef}>
-//       <div className="flex flex-col xl:flex-row items-center justify-center flex-wrap gap-12 xl:gap-24 overflow-hidden">
-        
-//         {/* TEXT SECTION */}
-//         <div className="w-full xl:w-6/12 2xl:w-6/12">
-//           <h1 className="text-3xl sm:text-4xl xl:text-5xl text-center xl:text-left tracking-in-expand text-[#a3a1a1] mb-4 xl:mt-12">
-//             ABOUT ME
-//           </h1>
-
-//           <div className="p-4 xl:p-3">
-//             <p className="text-sm sm:text-base xl:text-sm 2xl:text-md text-justify text-[#b3b2b2] leading-relaxed">
-//               I am a Software developer, passionate about consistently advancing
-//               my knowledge and skills to craft intuitive and dynamic user
-//               interfaces. I belong to Ibadan Techies club, I have also attended
-//               multiple seminars on coding. My journey into the tech world isn't only
-//               about writing lines of code, it's about creating meaningful
-//               solutions that have real impact. If you are curious about the
-//               projects I've worked on or looking for a collaboration on a new
-//               venture please feel free to explore my portfolio or reach out. I'm
-//               always eager to connect and discuss the limitless possibilities
-//               the tech world offers.
-//             </p>
-
-//             <div className="flex flex-col sm:flex-row sm:justify-between xl:justify-start xl:gap-6 mt-8 gap-4 sm:gap-0">
-//               <button className="border-2 border-[#387d82] py-2 px-4 text-[#66c8cf] rounded-lg">
-//                 See more
-//               </button>
-//               <button
-//                 onClick={props.handleTocontact2}
-//                 className="border-2 border-[#387d82] py-2 px-4 text-[#66c8cf] rounded-lg"
-//               >
-//                 Contact me
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* IMAGE + ICONS SECTION */}
-//         <div className="relative w-56 h-56 sm:w-64 sm:h-64 xl:w-72 xl:h-72 mb-12 rounded-full bg-[#042a2d]">
-          
-//           {/* Profile Image */}
-//           <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-[200px] sm:w-[260px] md:w-[280px] xl:w-[400px]">
-//             <img
-//               src="myimage.png"
-//               className="w-full mt-2"
-//               alt="my-picture"
-//             />
-//           </div>
-
-//           {/* Icons */}
-//           <div className="absolute top-8 left-2 xl:top-12 xl:left-2 w-[30px] h-[30px] xl:w-[50px] xl:h-[50px] flex justify-center items-center rounded-full bg-[#f6efef] text-[#042a2d] hover:bg-[#3c344b] hover:text-white bounce-in-top cursor-pointer">
-//             <IoCall />
-//           </div>
-
-//           <div className="absolute top-1 left-14 xl:-top-3 xl:left-20 w-[30px] h-[30px] xl:w-[50px] xl:h-[50px] flex justify-center items-center rounded-full bg-[#f6efef] text-[#042a2d] hover:bg-[#3c344b] hover:text-white bounce-in-top cursor-pointer">
-//             <BsFillBriefcaseFill />
-//           </div>
-
-//           <div className="absolute -top-2 left-24 xl:-top-3 xl:left-44 w-[30px] h-[30px] xl:w-[50px] xl:h-[50px] flex justify-center items-center rounded-full bg-[#f6efef] text-[#042a2d] hover:bg-[#3c344b] hover:text-white bounce-in-top cursor-pointer">
-//             <MdDownloadForOffline size={20} />
-//           </div>
-
-//           <div className="absolute top-7 -right-1 xl:top-14 xl:-right-1 w-[30px] h-[30px] xl:w-[50px] xl:h-[50px] flex justify-center items-center rounded-full bg-[#f6efef] text-[#042a2d] hover:bg-[#3c344b] hover:text-white bounce-in-top cursor-pointer">
-//             <RxGithubLogo size={20} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// });
-
-// export default Aboutme;

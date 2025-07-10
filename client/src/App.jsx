@@ -12,37 +12,26 @@ import Quote from './components/Quote'
 
 
 function App() {
-  const aboutmeRef = useRef(null);
-  const skillsRef = useRef(null);
-  const myprojectRef = useRef(null);
-  const toolsRef = useRef(null);
-  const contactRef = useRef(null);
-  const contactRef2 = useRef(null);
-  const NavRef = useRef(null);
-  const refs = {
-    aboutmeRef: aboutmeRef,
-    skillsRef: skillsRef,
-    myprojectRef: myprojectRef,
-    toolsRef: toolsRef,
-    contactRef: contactRef,
-    contactRef2: contactRef,
-    NavRef: NavRef
-
-  }
-  const handleTocontact2 = () => {
-    refs.contactRef.current.scrollIntoView({ behavior: 'smooth' });
-};
-
+   const refs = {
+    aboutmeRef: useRef(null),
+    skillsRef: useRef(null),
+    myprojectRef: useRef(null),
+    toolsRef: useRef(null),
+    contactRef: useRef(null),
+    contactRef2: useRef(null),
+    NavRef: useRef(null)
+  };
 
   return (
-    <div >
-      <Nav ref={refs} />
-      <Aboutme ref={refs}  handleTocontact2={handleTocontact2}/>
+    <div>      
+      <Aboutme 
+      refs ={refs}
+      />
       {/* <Quote /> */}
       <Myproject ref={refs} />
       <Skills ref={refs} />
       <Contact ref={refs} />
-      <SocialMedia ref={refs} />
+      <SocialMedia  />
       <Appreciation />
       <Footer />
     </div>
