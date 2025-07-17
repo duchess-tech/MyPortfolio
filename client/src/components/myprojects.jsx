@@ -81,7 +81,7 @@ const Myproject = forwardRef((props, ref) => {
           onMouseLeave={() => handleMouseLeave("taskTracker")}
         >
           <div
-            onClick={() => openUrl("https://tasktracker-weld.vercel.app/")}
+            onClick={() => openUrl("tasktracker-5.vercel.app")}
             className="2xl:w-96 2xl:h-96 w-56 h-72 border overflow-hidden rounded-xl"
           >
             <img src="tasktraker.jpg" alt="Tasktracker-img" />
